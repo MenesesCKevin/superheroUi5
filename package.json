@@ -25,7 +25,11 @@
   },
   "ui5": {
     "dependencies": [
-      "ui5-middleware-livereload"
+      "ui5-middleware-livereload",
+      "axios"
     ]
+  },
+  "dependencies": {
+    "axios": "^0.21.4"
   }
 }

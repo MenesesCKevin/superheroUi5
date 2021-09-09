@@ -66,23 +66,23 @@
         "routerClass": "sap.m.routing.Router",
         "viewType": "XML",
         "viewPath": "com.bmore.superheroes.view",
-        "controlId": "idAppControl",
+        "controlId": "mainContents",
         "controlAggregation": "pages",
         "async": true
       },
       "routes": [
         {
-          "name": "RouteMainView",
-          "pattern": "RouteMainView",
-          "target": ["TargetMainView"]
+          "name": "ListaHeroes",
+          "pattern": "",
+          "target": ["ListaHeroes"]
         }
       ],
       "targets": {
-        "TargetMainView": {
+        "ListaHeroes": {
           "viewType": "XML",
           "viewLevel": 1,
-          "viewId": "idAppControl",
-          "viewName": "MainView"
+          "viewId": "ListaHeroes",
+          "viewName": "ListaHeroes"
         }
       }
     }

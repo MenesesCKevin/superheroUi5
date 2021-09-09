@@ -1,12 +1,31 @@
  <mvc:View controllerName="com.bmore.superheroes.controller.MainView"
-  displayBlock="true"
   xmlns="sap.m"
-  xmlns:mvc="sap.ui.core.mvc">
-  <App id="idAppControl" >
-    <pages>
-      <Page title="{i18n>title}">
-        <content></content>
-      </Page>
-    </pages>
-  </App>
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:tnt="sap.tnt"
+	xmlns:f="sap.f">
+	<tnt:ToolPage id="app" class="sapUiDemoToolPage" sideExpanded="true">
+		<tnt:header>
+			<f:ShellBar id="shell_bar_app" showNavButton="false" navButtonPressed="_onNavBack" title="Superhéroes" showMenuButton="false" homeIcon="./images/Logotipo_RGB-02.png" showCopilot="true" showSearch="false" showNotifications="false" menuButtonPressed="onSideNavButtonPress" showProductSwitcher="false" productSwitcherPressed="fnOpen" avatarPressed="handlePopoverPress" notificationsNumber="2">
+				<!--<f:menu>
+					<Menu>
+						<MenuItem text="Flight booking" icon="sap-icon://flight" />
+						<MenuItem text="Car rental" icon="sap-icon://car-rental" />
+					</Menu>
+				</f:menu>-->
+				<f:profile>
+					<f:Avatar id="avatar"/>
+				</f:profile>
+			</f:ShellBar>
+		</tnt:header>
+		<tnt:mainContents>
+			<OverflowToolbar id="menu_toolbar" width="auto" height="46px" design="Solid" visible="false" enabled="true">
+				<content>
+					<Button press="entities" text="Manejo de entidades" type="Default" icon="sap-icon://personnel-view" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" class="sapUiMediumMarginBegin"/>
+					<Button press="import" text="Importar" type="Default" icon="sap-icon://upload" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+					<Button press="export" text="Exportar" type="Default" icon="sap-icon://download" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+				</content>
+			</OverflowToolbar>
+			<App id="mainContents"/>
+		</tnt:mainContents>
+	</tnt:ToolPage>
 </mvc:View>
