@@ -11,7 +11,7 @@ sap.ui.define(["com/bmore/superheroes/controller/BaseController",
         this.obtieneHero();
       },
       crear: async function(){
-        let oringPlace= this.byId("originPlace").getValue();
+        let oringPlace= this.byId("combo").getValue();
         let birthdayDate= this.byId("birthdayDate").getValue();
         let alterName= this.byId("alterName").getValue();
         let birthName= this.byId("birthName").getValue();
